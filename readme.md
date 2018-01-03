@@ -6,16 +6,18 @@ A curry-function which returns width and height for a child-box you want to cont
 `yarn add contain-box`
 
 ## Usage
+
+### Import
+`import containBox from 'contain-box'`
+
+### Direct Usage
 ```
-import containBox from 'contain-box'
-
-// containBox(parentWidth, parentHeight)(childWidth, childHeight)
-
-// Contain child-size to parent-size
 containBox(1,1)(16,9)
 // > [1, 0.5625]
+```
 
-// Make a curry-function
+### As a curry-function
+```
 const squareBox = containBox(1,1)
 
 squareBox(16,9)
