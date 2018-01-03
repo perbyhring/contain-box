@@ -47,4 +47,4 @@ setSize = () => {
 window.addEventListener('resize', setSize);
 setSize();
 
-```;
+```
