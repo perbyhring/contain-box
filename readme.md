@@ -30,3 +30,21 @@ squareBox(2,3)
 // > [0.6666666666666666, 1]
 
 ```
+
+### Examples
+
+#### Contain a 16:9-`<div></div>` to the viewport:
+
+```
+const mybox = document.querySelector('.my-box');
+
+setSize = () => {
+  const size = containBox(window.innerWidth,window.innerHeight)(16,9);
+  mybox.style.width = `${size[0]}px`;
+  mybox.style.height = `${size[1]}px`;
+};
+
+window.addEventListener('resize', setSize);
+setSize();
+
+```;
