@@ -38,7 +38,7 @@ squareBox(2,3)
 ```
 const mybox = document.querySelector('.my-box');
 
-setSize = () => {
+const setSize = () => {
   const size = containBox(window.innerWidth,window.innerHeight)(16,9);
   mybox.style.width = `${size[0]}px`;
   mybox.style.height = `${size[1]}px`;
