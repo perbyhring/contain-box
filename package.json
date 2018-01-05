@@ -1,7 +1,7 @@
 {
   "name": "contain-box",
   "version": "1.0.0",
-  "description": "A curry-function which returns width and height for a child-box you want to contain inside a parent-box.",
+  "description": "A curry-function which returns width and height for a child-box you want to contain inside a parent-box. Similar to css background-size:contain",
   "main": "dist/build.js",
   "scripts": {
     "build": "browserify contain-box.js --standalone containBox > dist/build.js"

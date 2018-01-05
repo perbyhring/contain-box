@@ -2,6 +2,8 @@
 
 A curry-function which returns width and height for a child-box you want to contain inside a parent-box.
 
+Similar to the css-rule `background-size: contain`.
+
 ## Install
 `yarn add contain-box`
 
