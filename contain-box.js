@@ -1,4 +1,4 @@
-const containBox = function(parentWidth, parentHeight) {
+var containBox = function(parentWidth, parentHeight) {
 
   var parentFormat = parentWidth / parentHeight;
 
@@ -14,8 +14,7 @@ const containBox = function(parentWidth, parentHeight) {
       height = parentWidth / childWidth * childHeight;
     }
     return [width, height];
-  }
-
+  };
 };
 
 module.exports = containBox;
