@@ -1,6 +1,6 @@
 # contain-box
 
-A curry-function which returns width and height for a child-box you want to contain inside a parent-box.
+A curry-function which returns width and height for a fixed-format child-element you want to contain inside a dynamic-format parent-element.
 
 Similar to the css-rule `background-size: contain`.
 
@@ -14,22 +14,22 @@ Similar to the css-rule `background-size: contain`.
 
 ### Direct Usage
 ```
-containBox(1,1)(16,9)
+containBox(16,9)(1,1)
 // > [1, 0.5625]
 ```
 
 ### As a curry-function
 ```
-const squareBox = containBox(1,1)
+const contain169 = containBox(16,9)
 
-squareBox(16,9)
-// > [1, 0.5625]
+contain169(1280,720)
+// > [1280, 720]
 
-squareBox(4,3)
-// > [1, 0.75]
+contain169(200,100)
+// > [177.77777777777777, 100]
 
-squareBox(2,3)
-// > [0.6666666666666666, 1]
+contain169(100,200)
+// > [100, 56.25]
 
 ```
 
@@ -41,7 +41,7 @@ squareBox(2,3)
 const mybox = document.querySelector('.my-box');
 
 const setSize = () => {
-  const size = containBox(window.innerWidth,window.innerHeight)(16,9);
+  const size = containBox(16,9)(window.innerWidth,window.innerHeight);
   mybox.style.width = `${size[0]}px`;
   mybox.style.height = `${size[1]}px`;
 };
