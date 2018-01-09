@@ -1,5 +1,5 @@
 var containBox = function(childX, childY) {
-  return function(parentX, parentY, reverse) {
+  return function(parentX, parentY) {
     var parentFormat = parentX / parentY,
         childFormat = childX / childY;
     if (parentFormat > childFormat) {
