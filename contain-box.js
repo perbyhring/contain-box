@@ -1,7 +1,12 @@
 var containBox = function(childX, childY) {
+
+  var childFormat = childX / childY;
+
   return function(parentX, parentY) {
+
     var parentFormat = parentX / parentY,
-        childFormat = childX / childY;
+        width, height;
+
     if (parentFormat > childFormat) {
       width = parentX / parentFormat / (childY / childX);
       height = width / childX * childY;
@@ -9,6 +14,7 @@ var containBox = function(childX, childY) {
       width = parentX;
       height = parentX / childX * childY;
     }
+
     return [width, height];
   };
 };
